@@ -1,0 +1,2 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('blutraksdk 1.01b.aar'))
