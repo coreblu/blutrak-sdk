@@ -66,22 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return;
             model.setConnectionState(connectionState);
             updateList();
-            switch (connectionState) {
-                case Connected:
-                    Logger.LogD(TAG, device.getDeviceAlias() + " | Connected");
-                    break;
-                case Disconnected:
-                    Logger.LogD(TAG, device.getDeviceAlias() + " | Disconnected");
-                    break;
-                case Connecting:
-                    Logger.LogD(TAG, device.getDeviceAlias() + " | Connecting");
-                    break;
-                case Disconnecting:
-                    Logger.LogD(TAG, device.getDeviceAlias() + " | Disconnecting");
-                    break;
 
-
-            }
         }
     };
 
@@ -171,6 +156,35 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SavedDevices.add(mac, alias, getApplicationContext());
         BlutrakDevice device = DeviceManager.createDevice(mac, alias, getApplicationContext());
         device.connect(true);
+
+        device.setConnectionStateChangeListener(new ConnectionStateChangeListener() {
+            @Override
+            public void onConnectionStateChange(BlutrakDevice blutrakDevice, ConnectionState connectionState) {
+                switch (connectionState) {
+                    case Connected:
+                        break;
+                    case Disconnected:
+                        break;
+                    case Connecting:
+                        break;
+                    case Disconnecting:
+                        break;
+
+                }
+            }
+        });
+        device.setKeyPressListener(new KeyPressListener() {
+            @Override
+            public void onShortPress(BlutrakDevice blutrakDevice) {
+
+            }
+
+            @Override
+            public void onLongPress(BlutrakDevice blutrakDevice) {
+
+            }
+        });
+
         device.setConnectionStateChangeListener(connectionStateChangeListener);
         device.setKeyPressListener(keyPressListener);
         devices.put(device.getDeviceAddress(), device);
