@@ -31,7 +31,7 @@ Connect to blutrak device from mac
      BlutrakDevice btDevice = DeviceManager.createDevice(mac, alias, 
      getApplicationContext());
      btDevice.connect(true);
-     device.setConnectionStateChangeListener(new ConnectionStateChangeListener() {
+     device.addConnectionStateChangeListener(new ConnectionStateChangeListener() {
             @Override
             public void onConnectionStateChange(BlutrakDevice blutrakDevice, ConnectionState connectionState) {
                 switch (connectionState) {
@@ -46,7 +46,7 @@ Connect to blutrak device from mac
                 }
             }
         });
-        device.setKeyPressListener(new KeyPressListener() {
+        device.addKeyPressListener(new KeyPressListener() {
             @Override
             public void onShortPress(BlutrakDevice blutrakDevice) {
                 
