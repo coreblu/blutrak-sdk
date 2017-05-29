@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/blutrak-sdk-sample.iml" filepath="$PROJECT_DIR$/blutrak-sdk-sample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/blutraksdk 1.01b/blutraksdk 1.01b.iml" filepath="$PROJECT_DIR$/blutraksdk 1.01b/blutraksdk 1.01b.iml" />
+      <module fileurl="file://$PROJECT_DIR$/blutraksdk 1.02b/blutraksdk 1.02b.iml" filepath="$PROJECT_DIR$/blutraksdk 1.02b/blutraksdk 1.02b.iml" />
     </modules>
   </component>
 </project>

@@ -66,7 +66,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         holder.mac.setText(model.getMac());
 
         if (model.isPendingAlert()) {
-            YoYo.with(new ShakeAnimator()).duration(500).repeat(6).playOn(holder.rootView);
+            YoYo.with(new ShakeAnimator()).duration(500).playOn(holder.rootView);
             model.setPendingAlert(false);
         }
 

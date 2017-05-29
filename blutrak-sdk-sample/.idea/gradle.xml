@@ -9,7 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/blutraksdk 1.01b" />
+            <option value="$PROJECT_DIR$/blutraksdk 1.02b" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

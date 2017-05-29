@@ -32,5 +32,5 @@ dependencies {
     compile 'com.daimajia.easing:library:2.0@aar'
     compile 'com.daimajia.androidanimations:library:2.2@aar'
     testCompile 'junit:junit:4.12'
-    compile project(':blutraksdk 1.01b')
+    compile project(':blutraksdk 1.02b')
 }
